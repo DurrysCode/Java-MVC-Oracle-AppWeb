@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/src/java/Controlador/ControladorAsignaciones.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/src/java/Modelo/Asignacion.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/src/java/Modelo/AsignacionCompletaDAO.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/web/EDITAsignacion.jsp</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/web/ADDNotas.jsp</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/web/ADDCurso.jsp</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/web/ADDAsignacion.jsp</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/web/ADDEstudiante.jsp</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/web/ADDUsuario.jsp</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/ProyectoFinalWeb/src/java/Controlador/ControladorCursos.java</file>
         </group>
     </open-files>
 </project-private>

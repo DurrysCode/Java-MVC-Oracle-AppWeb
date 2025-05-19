@@ -8,28 +8,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Asignaciones</title>
     </head>
     <body>
-        <center>
-        <div>
-            <h1>Actualizar Asignacion</h1>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-warning text-white text-center">
+                            <h4>Actualizar Asignación</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="ControladorAsignaciones" method="POST">
+                                <input type="hidden" name="asignacion" value="${datos.getCodigoAsignacion()}">
+                                <div class="mb-3">
+                                    <label class="form-label">Número de Asignación</label>
+                                    <input type="number" class="form-control" value="${datos.getCodigoAsignacion()}" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Código del Curso</label>
+                                    <input type="text" class="form-control" name="curso" value="${datos.getCodigoCurso()}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Carnet del Estudiante</label>
+                                    <input type="number" class="form-control" name="carnet" value="${datos.getCodigoCarnet()}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Fecha</label>
+                                    <input type="date" class="form-control" name="fecha" value="${datos.getFecha()}">
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary" name="accion" value="Actualizar">Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <form action="ControladorAsignaciones" method="POST">
-                Numero de Asignacion (Numerico)<br>
-                <input type="hidden" name="asignacion" value="${datos.getCodigoAsignacion()}">
-                <input type="number" value="${datos.getCodigoAsignacion()}" disabled="true"><br>
-                Codigo del curso: <br>
-                <input type="text" name="curso" value="${datos.getCodigoCurso()}"><br>
-                Carnet del estudiante: (Numerico)<br>
-                <input type="number" name="carnet" value="${datos.getCodigoCarnet()}"><br>
-                Fecha: <br>
-                <input type="date" name="fecha" value="${datos.getFecha()}"><br>
-                <input type="submit" name="accion" value="Actualizar">
-            </form>
-        </div>
-    </center>
     </body>
 </html>

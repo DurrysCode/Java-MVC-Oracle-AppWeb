@@ -8,30 +8,49 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Estudiantes</title>
     </head>
     <body>
-    <center>
-        <div>
-            <h1>Actualizar Estudiante</h1>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-secondary text-white text-center">
+                            <h4>Actualizar Estudiante</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="ControladorEstudiantes" method="POST">
+                                <input type="hidden" name="ca" value="${est.getCarnet()}">
+                                <div class="mb-3">
+                                    <label class="form-label">Carnet</label>
+                                    <input type="number" class="form-control" value="${est.getCarnet()}" disabled>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" value="${est.getNombre()}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Teléfono</label>
+                                    <input type="number" class="form-control" name="telefono" value="${est.getTelefono()}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Correo Electrónico</label>
+                                    <input type="text" class="form-control" name="correo" value="${est.getCorreo()}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" name="direccion" value="${est.getDireccion()}">
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-dark" name="accion" value="Actualizar">Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <form action="ControladorEstudiantes" method="POST">
-                Carnet: (Numerico)<br>
-                <input type="number" value="${est.getCarnet()}" disabled>
-                <input type="hidden" name="ca" value="${est.getCarnet()}"><br>
-                Nombre: <br>
-                <input type="text" name="nombre" value="${est.getNombre()}"><br>
-                Telefono: (Numerico)<br>
-                <input type="number" name="telefono" value="${est.getTelefono()}"><br>
-                Correo Electronico: <br>
-                <input type="text" name="correo" value="${est.getCorreo()}"><br>
-                Direccion: <br>
-                <input type="text" name="direccion" value="${est.getDireccion()}"><br>
-                <input type="submit" name="accion" value="Actualizar">
-            </form>
-        </div>
-    </center>
-</body>
+    </body>
 </html>

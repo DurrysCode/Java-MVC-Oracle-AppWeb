@@ -8,28 +8,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Asignaciones</title>
     </head>
     <body>
-    <center>
-        <div>
-            <h1>Añadir Asignacion</h1>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4>Añadir Asignación</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="ControladorAsignaciones" method="POST">
+                            <div class="mb-3">
+                                <label for="asignacion" class="form-label">Número de Asignación (Numérico)</label>
+                                <input type="number" class="form-control" id="asignacion" name="asignacion" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="curso" class="form-label">Código del Curso</label>
+                                <input type="text" class="form-control" id="curso" name="curso" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="carnet" class="form-label">Carnet del Estudiante (Numérico)</label>
+                                <input type="number" class="form-control" id="carnet" name="carnet" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            </div>
+
+                            <input type="hidden" name="notas" value="0">
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success" name="accion" value="Guardar">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <form action="ControladorAsignaciones" method="POST">
-                Numero de Asignacion (Numerico)<br>
-                <input type="number" name="asignacion"><br>
-                Codigo del curso: <br>
-                <input type="text" name="curso"><br>
-                Carnet del estudiante: (Numerico)<br>
-                <input type="number" name="carnet"><br>
-                Fecha: <br>
-                <input type="date" name="fecha"><br>
-                <input type="hidden" name="notas" value="0">
-                <input type="submit" name="accion" value="Guardar">
-            </form>
-        </div>
-    </center>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
