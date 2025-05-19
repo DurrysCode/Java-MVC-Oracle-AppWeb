@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.1" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_1.xsd">
+    <servlet>
+        <servlet-name>ControladorUsuarios</servlet-name>
+        <servlet-class>Controlador.ControladorUsuarios</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorLogin</servlet-name>
+        <servlet-class>Controlador.ControladorLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorEstudiantes</servlet-name>
+        <servlet-class>Controlador.ControladorEstudiantes</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorCursos</servlet-name>
+        <servlet-class>Controlador.ControladorCursos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorAsignaciones</servlet-name>
+        <servlet-class>Controlador.ControladorAsignaciones</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControladorUsuarios</servlet-name>
+        <url-pattern>/ControladorUsuarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorLogin</servlet-name>
+        <url-pattern>/ControladorLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorEstudiantes</servlet-name>
+        <url-pattern>/ControladorEstudiantes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCursos</servlet-name>
+        <url-pattern>/ControladorCursos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorAsignaciones</servlet-name>
+        <url-pattern>/ControladorAsignaciones</url-pattern>
+    </servlet-mapping>
+</web-app>
